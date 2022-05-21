@@ -41,7 +41,7 @@ const SingleReview = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <div className="card lg:max-w-lg bg-base-100 shadow-xl">
+                    <div className="card sm:max-w-sm bg-base-100 shadow-xl">
                         <div className="card-body">
                             <h2 className="card-title">It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content</h2>
                         </div>
@@ -59,7 +59,7 @@ const SingleReview = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="card lg:max-w-lg bg-base-100 shadow-xl">
+                    <div className="card sm:max-w-sm bg-base-100 shadow-xl">
                         <div className="card-body">
                             <h2 className="card-title">It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content</h2>
                         </div>

@@ -8,12 +8,12 @@ const Reviews = () => {
     return (
         <div>
             <h1 className='text-4xl font-bold text-left textunder'>What Our Patients Says</h1>
-            <div class="my-10 md:flex flex-col w-full lg:flex-row">
-                <div class="md:grid flex-grow w-1/2  card bg-base-300  place-items-center">
+            <div className="my-10 md:flex flex-col w-full lg:flex-row">
+                <div className="md:grid flex-grow w-1/2  card bg-base-300  place-items-center">
                     <SingleReview></SingleReview>
                 </div>
-                {/* <div class="divider lg:divider-horizontal">OR</div> */}
-                <div class=" md:grid flex-grow w-1/3  card bg-base-300 rounded-box  place-items-center">
+                {/* <div className="divider lg:divider-horizontal">OR</div> */}
+                <div className=" md:grid flex-grow w-1/3  card bg-base-300 rounded-box  place-items-center">
                     <img src="https://prestashoptheme.in/prs/PRS713/modules/tt_bannerslider/views/img/banner1.jpg" alt="" />
                 </div>
             </div>
