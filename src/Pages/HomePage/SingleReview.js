@@ -38,7 +38,7 @@ const SingleReview = () => {
                     clickable: true,
                 }}
                 modules={[Pagination]}
-                className="mySwiper"
+                className="mySwiper  md:w-1/2  "
             >
                 <SwiperSlide>
                     <div className="card sm:max-w-sm bg-base-100 shadow-xl">
@@ -66,7 +66,7 @@ const SingleReview = () => {
                         <div className=''>
                             <div className="avatar">
                                 <div className="w-20 rounded-full ring ring-primary ring-offset-base-100 mr-10">
-                                    <img src='https://prestashoptheme.in/prs/PRS713/modules/tt_testimonialslider/views/img/testimonial_img1.jpg' alt='' />
+                                    <img src='https://prestashoptheme.in/prs/PRS713/modules/tt_testimonialslider/views/img/testimonial_img2.jpg' alt='' />
                                 </div>
                             </div>
                             <div>
@@ -84,7 +84,7 @@ const SingleReview = () => {
                         <div className=''>
                             <div className="avatar">
                                 <div className="w-20 rounded-full ring ring-primary ring-offset-base-100 mr-10">
-                                    <img src='https://prestashoptheme.in/prs/PRS713/modules/tt_testimonialslider/views/img/testimonial_img1.jpg' alt='' />
+                                    <img src='https://prestashoptheme.in/prs/PRS713/modules/tt_testimonialslider/views/img/testimonial_img3.jpg' alt='' />
                                 </div>
                             </div>
                             <div>
