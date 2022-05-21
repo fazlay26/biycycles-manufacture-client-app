@@ -1,0 +1,29 @@
+[
+    {
+        "_id": 1,
+        "name": "Handle Bar",
+        "img": "https://static-01.daraz.com.bd/p/84963f8e33d5528daaa3d40c802e6c85.jpg",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "MinimumOrder": 30,
+        "AvailableQuantity": 100,
+        "PricePerUnit": 60
+    },
+    {
+        "_id": 2,
+        "name": "Handle Bar",
+        "img": "https://static-01.daraz.com.bd/p/84963f8e33d5528daaa3d40c802e6c85.jpg",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "Minimum Order": 30,
+        "Available Quantity": 100,
+        "Price(per unit)": 60
+    },
+    {
+        "_id": 3,
+        "name": "Handle Bar",
+        "img": "https://static-01.daraz.com.bd/p/84963f8e33d5528daaa3d40c802e6c85.jpg",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "Minimum Order": 30,
+        "Available Quantity": 100,
+        "Price(per unit)": 60
+    }
+]
