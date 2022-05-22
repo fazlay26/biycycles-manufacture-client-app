@@ -11,7 +11,7 @@ import Reviews from './Reviews';
 const Home = () => {
     return (
         <div>
-            <Navbar></Navbar>
+
             <Banner></Banner>
             <Parts></Parts>
             <ExtraSection1></ExtraSection1>

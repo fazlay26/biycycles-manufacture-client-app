@@ -10,20 +10,20 @@
     },
     {
         "_id": 2,
-        "name": "Handle Bar",
-        "img": "https://static-01.daraz.com.bd/p/84963f8e33d5528daaa3d40c802e6c85.jpg",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "Minimum Order": 30,
-        "Available Quantity": 100,
-        "Price(per unit)": 60
+        "name": "INTERNAL GEARED HUB",
+        "img": "http://content.bikeroar.com/system/product/000/019/474/large/HUB.jpg?1472074837",
+        "description": "The new SRAM Automatix means an innovative concept realized in an internal gear hub offering unknown comfort. The SRAM Automatix changes gears when you reach a certain speed limit. And shifts back when you slow down. ",
+        "MinimumOrder": 50,
+        "AvailableQuantity": 100,
+        "PricePerUnit": 18
     },
     {
         "_id": 3,
-        "name": "Handle Bar",
-        "img": "https://static-01.daraz.com.bd/p/84963f8e33d5528daaa3d40c802e6c85.jpg",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "Minimum Order": 30,
-        "Available Quantity": 100,
-        "Price(per unit)": 60
+        "name": "Carbon Fiber Frame",
+        "img": "https://m.media-amazon.com/images/I/51Jf+eAX5fL._SX679_.jpg",
+        "description": "Carbon Fiber Mountain Bike Frame Full Carbon Lightweight MTB Frame Mountain Bicycle Frame 26er MTB Matte Black Bicycle Frame Internal Cable Routing",
+        "MinimumOrder": 50,
+        "AvailableQuantity": 100,
+        "PricePerUnit": 45
     }
 ]
