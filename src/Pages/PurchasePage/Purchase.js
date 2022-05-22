@@ -29,8 +29,9 @@ const Purchase = () => {
             product: part.name,
             customerName: user?.displayName,
             customerEmail: user?.email,
-            orderQuantity: e.target.orderQuantity.value
+            orderQuantity: e.target.inputQuantity.value
         }
+        //post
         fetch('http://localhost:5000/part', {
             method: 'POST',
             headers: {
@@ -41,10 +42,23 @@ const Purchase = () => {
         })
             .then(res => res.json())
             .then(result => {
-                console.log(result);
+                //console.log(result);
                 toast.success('succesfully booked the product')
                 e.target.reset();
             })
+
+        // fetch(`http://localhost:5000/part/${id}`, {
+        //     method: 'PUT',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify(part.AvailableQuantity),
+
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log(data);
+        //     })
     }
     return (
         <div>
@@ -57,6 +71,7 @@ const Purchase = () => {
                         <h1 class="text-5xl font-bold">{part.name}</h1>
                         <p class="">price(per unite):${part.PricePerUnit}</p>
                         <p class="">{part.description}</p>
+                        <p class="">Available Quantity:{part.AvailableQuantity}</p>
                         {/* input quantity */}
                         <h1>Quantity</h1>
                         <p>you have to order minimum {part.MinimumOrder} and maximum {part.AvailableQuantity}</p>
@@ -107,7 +122,9 @@ const Purchase = () => {
                                 <span class="label-text">Product Quantity</span>
 
                             </label>
-                            <input type="number" placeholder="Type here" name='orderQuantity' class="input input-bordered w-full max-w-xs" />
+                            <input className='input input-bordered w-full max-w-xs' type="number" id='' name='inputQuantity' placeholder='type here' min={part.MinimumOrder}
+                                max={part.AvailableQuantity}
+                            />
                         </div>
                         <button class="btn btn-accent mt-4">Place Order</button>
                     </div>
