@@ -12,9 +12,12 @@ const Navbar = () => {
     const [user, loading, error] = useAuthState(auth);
     const menuItems = <>
         <li><Link to='/'>Home</Link></li>
-        <li><a>About ME</a></li>
+
+
         <li><a>Accescorries</a></li>
-        <li>{user ? <button onClick={logOut} class="btn btn-link">logout({user.email})</button> : <Link to='/login'>Login</Link>}</li>
+
+        <li>{user ? <li><Link to='/dashboard'>Dashboard</Link></li> : ''}</li>
+        <li>{user ? <button onClick={logOut} class="btn btn-link mt-3">logout({user.email})</button> : <Link to='/login'>Login</Link>}</li>
     </>
 
 

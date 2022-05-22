@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Useparts from '../../Hooks/Useparts';
 
@@ -20,6 +21,30 @@ const Purchase = () => {
         if (e.target.inputQuantity.value < part.MinimumOrder) {
             setDisable(true)
         }
+    }
+    const handlePurchase = (e) => {
+        e.preventDefault()
+        const order = {
+            productId: part._id,
+            product: part.name,
+            customerName: user?.displayName,
+            customerEmail: user?.email,
+            orderQuantity: e.target.orderQuantity.value
+        }
+        fetch('http://localhost:5000/part', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+                toast.success('succesfully booked the product')
+                e.target.reset();
+            })
     }
     return (
         <div>
@@ -47,7 +72,7 @@ const Purchase = () => {
             </div>
             <div>
                 <h1 className='text-2xl font-bold mb-5 text-green-500'>Order Form</h1>
-                <form className=' flex justify-center'>
+                <form onSubmit={handlePurchase} className=' flex justify-center'>
                     <div className='border-2 p-10'>
                         <div class="form-control w-full max-w-xs">
                             <label class="label">
@@ -76,6 +101,13 @@ const Purchase = () => {
 
                             </label>
                             <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                        </div>
+                        <div class="form-control w-full max-w-xs">
+                            <label class="label">
+                                <span class="label-text">Product Quantity</span>
+
+                            </label>
+                            <input type="number" placeholder="Type here" name='orderQuantity' class="input input-bordered w-full max-w-xs" />
                         </div>
                         <button class="btn btn-accent mt-4">Place Order</button>
                     </div>
