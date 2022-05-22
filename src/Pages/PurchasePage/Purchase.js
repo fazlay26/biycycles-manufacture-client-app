@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
@@ -7,12 +7,20 @@ import Useparts from '../../Hooks/Useparts';
 
 const Purchase = () => {
     const [user, loading] = useAuthState(auth);
+    const [disable, setDisable] = useState(false)
     console.log(user);
     const { id } = useParams()
     const [part] = Useparts(id)
     console.log(part);
-    const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+    if (loading) {
+        <button className="btn loading">loading</button>
+    }
+    const handleInput = (e) => {
+        e.preventDefault()
+        if (e.target.inputQuantity.value < part.MinimumOrder) {
+            setDisable(true)
+        }
+    }
     return (
         <div>
             <div class="hero min-h-screen bg-base-200">
@@ -20,10 +28,20 @@ const Purchase = () => {
                     <img src={part.img} alt='' class="max-w-sm rounded-lg shadow-2xl" />
                     <div>
 
-                        <h1 class="text-5xl font-bold">Hello <span className='text-green-500'>{user.displayName}</span>  you have clicked below item</h1>
+                        <h1 class="text-5xl font-bold">Hello <span className='text-green-500'>{user?.displayName}</span>  you have clicked below item</h1>
                         <h1 class="text-5xl font-bold">{part.name}</h1>
                         <p class="">price(per unite):${part.PricePerUnit}</p>
                         <p class="">{part.description}</p>
+                        {/* input quantity */}
+                        <h1>Quantity</h1>
+                        <p>you have to order minimum {part.MinimumOrder} and maximum {part.AvailableQuantity}</p>
+                        <form onSubmit={handleInput}>
+                            <input className='w-1/12 border-2 border-slate-500' type="number" id='' name='inputQuantity' placeholder='minimum 30 order' min={part.MinimumOrder}
+                                max={part.AvailableQuantity}
+                            />
+
+                            <button disabled={disable} class="btn  btn-success ml-3">purchase</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -36,14 +54,14 @@ const Purchase = () => {
                                 <span class="label-text">Name</span>
 
                             </label>
-                            <input value={user.displayName} type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                            <input value={user?.displayName} type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
                         </div>
                         <div class="form-control w-full max-w-xs">
                             <label class="label">
                                 <span class="label-text">Email</span>
 
                             </label>
-                            <input value={user.email} type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                            <input value={user?.email} type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
                         </div>
                         <div class="form-control w-full max-w-xs">
                             <label class="label">
