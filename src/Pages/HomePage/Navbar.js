@@ -12,7 +12,7 @@ const Navbar = () => {
     const [user, loading, error] = useAuthState(auth);
     const menuItems = <>
         <li><Link to='/'>Home</Link></li>
-
+        <li><Link to='/portfolio'>Portfolio</Link></li>
 
         <li><a>Accescorries</a></li>
 
