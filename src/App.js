@@ -20,6 +20,7 @@ import ManageProduct from './Pages/Dashboard/ManageProduct';
 import RequireAdmin from './Pages/SignupPage/RequireAdmin';
 import NotFound from './Pages/NotFound/NotFound';
 import Portfolio from './Pages/Portfolio/Portfolio';
+import Blogs from './Pages/Blogs/Blogs';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
           <Route path='manageproduct' element={<RequireAdmin><ManageProduct></ManageProduct></RequireAdmin>}></Route>
         </Route>
         <Route path='portfolio' element={<Portfolio></Portfolio>}></Route>
+        <Route path='blogs' element={<Blogs></Blogs>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <ToastContainer />

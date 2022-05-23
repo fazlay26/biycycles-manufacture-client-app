@@ -15,7 +15,7 @@ const PartCard = ({ part }) => {
                 <p>Available Quantity:{AvailableQuantity}</p>
                 <p>Price(per unite):{PricePerUnit}</p>
                 <div class="card-actions">
-                    <Link to={`/purchase/${_id}`}><button class="btn btn-primary">Purchase Now</button></Link>
+                    <Link to={`/purchase/${_id}`}><button style={{ backgroundColor: '#1BA370', }} class="btn">Purchase Now</button></Link>
                 </div>
             </div>
         </div>
