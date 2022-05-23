@@ -14,9 +14,9 @@ const MyProfile = () => {
             phone: e.target.number.value,
             linkedin: e.target.linkedin.value,
         }
-        fetch('http://localhost:5000/myprofile', {
+        fetch(`http://localhost:5000/myprofile/${user?.email}`, {
 
-            method: 'POST',
+            method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },

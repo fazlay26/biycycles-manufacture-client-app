@@ -13,6 +13,11 @@ import Purchase from './Pages/PurchasePage/Purchase';
 import Login from './Pages/SignupPage/Login';
 import RequireAuth from './Pages/SignupPage/RequireAuth';
 import Signup from './Pages/SignupPage/Signup';
+import Users from './Pages/Dashboard/Users';
+import ManageAllProducts from './Pages/Dashboard/ManageAllProducts';
+import AddProduct from './Pages/Dashboard/AddProduct';
+import ManageProduct from './Pages/Dashboard/ManageProduct';
+import RequireAdmin from './Pages/SignupPage/RequireAdmin';
 
 
 function App() {
@@ -29,6 +34,10 @@ function App() {
 
           <Route path='addreview' element={<AddReview></AddReview>}></Route>
           <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+          <Route path='manageallproducts' element={<RequireAdmin><ManageAllProducts></ManageAllProducts></RequireAdmin>}></Route>
+          <Route path='addproduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
+          <Route path='manageproduct' element={<RequireAdmin><ManageProduct></ManageProduct></RequireAdmin>}></Route>
         </Route>
       </Routes>
       <ToastContainer />
