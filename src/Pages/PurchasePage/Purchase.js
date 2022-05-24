@@ -1,3 +1,4 @@
+import { data } from 'autoprefixer';
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
@@ -24,12 +25,12 @@ const Purchase = () => {
 
 
 
-        // if (data.productquantity > part.MinimumOrder) {
-        //     setDisabled(true)
-        // }
-        // else {
-        //     setDisabled(false)
-        // }
+        if (data.productquantity < part.MinimumOrder) {
+            setDisabled(true)
+        }
+        else {
+            setDisabled(false)
+        }
 
 
 
@@ -42,6 +43,7 @@ const Purchase = () => {
             customerEmail: user?.email,
             adress: data.adress,
             phone: data.phone,
+            pricePerUnit: part.PricePerUnit,
             orderQuantity: data.productquantity
         }
         //post
@@ -165,7 +167,7 @@ const Purchase = () => {
 
                                 {/* <input {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
                             <input type="number" {...register("age", { min: 18, max: 99 })} /> */}
-                                {disabled ? <input disabled type="submit" className='btn btn-active mt-3' value='purchase' /> : <input type="submit" className='btn btn-active mt-3' value='purchase' />}
+                                <input type="submit" className='btn btn-active mt-3' value='purchase' />
                             </div>
                         </form>
                     </div>

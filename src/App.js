@@ -21,6 +21,7 @@ import RequireAdmin from './Pages/SignupPage/RequireAdmin';
 import NotFound from './Pages/NotFound/NotFound';
 import Portfolio from './Pages/Portfolio/Portfolio';
 import Blogs from './Pages/Blogs/Blogs';
+import Payment from './Pages/Dashboard/Payment';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
 
           <Route path='addreview' element={<AddReview></AddReview>}></Route>
           <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
           <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path='manageallproducts' element={<RequireAdmin><ManageAllProducts></ManageAllProducts></RequireAdmin>}></Route>
           <Route path='addproduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
