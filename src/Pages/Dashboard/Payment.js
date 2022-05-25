@@ -16,7 +16,7 @@ const Payment = () => {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
         }
     }).then(res => res.json()))
-    let price = order.pricePerUnit * order.orderQuantity
+    let price = order?.pricePerUnit * order?.orderQuantity
     if (isLoading) return 'Loading...'
     return (
         <div>
@@ -35,7 +35,7 @@ const Payment = () => {
             <div class="card w-96 bg-base-100 shadow-xl mt-5">
                 <div class="card-body">
                     <Elements stripe={stripePromise}>
-                        <CheckoutForm />
+                        <CheckoutForm order={order} price={price} />
                     </Elements>
 
                 </div>

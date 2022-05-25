@@ -19,21 +19,16 @@ const Purchase = () => {
         <button className="btn loading">loading</button>
     }
 
+    const { register, watch, formState: { errors }, handleSubmit } = useForm();
 
-    const { register, formState: { errors }, handleSubmit } = useForm();
     const onSubmit = data => {
 
-
-
-        if (data.productquantity < part.MinimumOrder) {
-            setDisabled(true)
-        }
-        else {
-            setDisabled(false)
-        }
-
-
-
+        // if (data.productquantity < part.MinimumOrder) {
+        //     setDisabled(true)
+        // }
+        // else {
+        //     setDisabled(false)
+        // }
 
         console.log(data)
         const order = {
@@ -167,7 +162,8 @@ const Purchase = () => {
 
                                 {/* <input {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
                             <input type="number" {...register("age", { min: 18, max: 99 })} /> */}
-                                <input type="submit" className='btn btn-active mt-3' value='purchase' />
+                                {/* <input type="submit" className='btn btn-active mt-3' value='purchase' /> */}
+                                {errors.productquantity?.type === 'min' || errors.productquantity?.type === 'max' ? <input disabled={true} type="submit" className='btn btn-active mt-3' value='purchase' /> : <input type="submit" className='btn btn-active mt-3' value='purchase' />}
                             </div>
                         </form>
                     </div>

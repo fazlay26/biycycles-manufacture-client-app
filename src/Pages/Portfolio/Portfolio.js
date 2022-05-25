@@ -4,7 +4,7 @@ const Portfolio = () => {
     return (
         <div>
             <h1 className='text-2xl font-bold text-green-500'>My Top 3 Projects</h1>
-            <div className='md:grid grid-cols-4 gap-5 mt-5'>
+            <div className='grid mt-5 sm:grid-cols-1 lg:grid-cols-3 gap-5 md:grid-cols-2 xl:grid-cols-4 '>
                 <div class="card w-96 bg-base-100 shadow-xl">
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">Fazlay Rabbi</h2>
