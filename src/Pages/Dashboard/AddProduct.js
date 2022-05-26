@@ -12,7 +12,7 @@ const AddProduct = () => {
             PricePerUnit: e.target.PricePerUnit.value,
         }
 
-        fetch('http://localhost:5000/adminpost', {
+        fetch('https://sheltered-meadow-37374.herokuapp.com/adminpost', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -1,6 +1,15 @@
-# Getting Started with Create React App
+# Bicycles Manufacturer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Site Link [CLICK HERE](https://bicyles-manufracture.web.app/).
+
+## My Websites Feautures:
+
+* my website is fully responsive
+* implement jwt and firebase authentication system
+* implement mongodb database
+* admin and user use Different url
+* i have secured the server side by 2 layers
+
 
 ## Available Scripts
 

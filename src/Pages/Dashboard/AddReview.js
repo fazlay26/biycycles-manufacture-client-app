@@ -11,7 +11,7 @@ const AddReview = () => {
             ratings: e.target.ratings.value,
             review: e.target.review.value
         }
-        fetch('http://localhost:5000/addreview', {
+        fetch('https://sheltered-meadow-37374.herokuapp.com/addreview', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -6,14 +6,14 @@ import ManageProductDelete from './ManageProductDelete';
 const ManageProduct = () => {
     // const [parts, setParts] = useState([])
     // useEffect(() => {
-    //     fetch('http://localhost:5000/part')
+    //     fetch('https://sheltered-meadow-37374.herokuapp.com/part')
     //         .then(res => res.json())
     //         .then(data => setParts(data))
     // }, [])
     const [deletingPart, setDeletingPart] = useState(null)
 
     const { isLoading, data: parts, refetch } = useQuery('part', () =>
-        fetch('http://localhost:5000/part').then(res =>
+        fetch('https://sheltered-meadow-37374.herokuapp.com/part').then(res =>
             res.json()
         )
     )

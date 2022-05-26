@@ -42,7 +42,7 @@ const Purchase = () => {
             orderQuantity: data.productquantity
         }
         //post
-        fetch('http://localhost:5000/part', {
+        fetch('https://sheltered-meadow-37374.herokuapp.com/part', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

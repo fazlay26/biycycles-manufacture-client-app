@@ -11,7 +11,7 @@ const CheckoutForm = ({ order }) => {
     // let price = order?.pricePerUnit * order?.orderQuantity
     const { pricePerUnit, orderQuantity, customerName, customerEmail, _id } = order
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://sheltered-meadow-37374.herokuapp.com/create-payment-intent', {
 
             method: 'POST',
             headers: {
@@ -77,7 +77,7 @@ const CheckoutForm = ({ order }) => {
                 productId: _id,
                 transictionId: paymentIntent.id
             }
-            fetch(`http://localhost:5000/order/${_id}`, {
+            fetch(`https://sheltered-meadow-37374.herokuapp.com/order/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
