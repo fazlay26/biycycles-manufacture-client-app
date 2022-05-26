@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const AddReview = () => {
@@ -22,6 +23,7 @@ const AddReview = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                toast('Review Addeded Successfully')
             })
     }
     return (
@@ -37,7 +39,7 @@ const AddReview = () => {
                     </div>
                     <div class="form-control w-full max-w-xs">
                         <label class="label">
-                            <span class="label-text">Ratings</span>
+                            <span class="label-text">Review</span>
                         </label>
                         <input name='review' min='0' max='5' type="text" placeholder="Enter Your FeedBack" class="input input-bordered w-full max-w-xs" />
                     </div>

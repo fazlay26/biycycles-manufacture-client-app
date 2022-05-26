@@ -33,8 +33,6 @@ const ManageAllProducts = () => {
                         }
 
 
-
-
                     </tbody>
                 </table>
             </div>

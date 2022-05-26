@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const AddProduct = () => {
     const handleSubmit = (e) => {
@@ -23,6 +24,7 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                toast('product addedded successfully ')
             })
     }
     return (

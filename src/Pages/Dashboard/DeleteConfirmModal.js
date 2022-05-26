@@ -2,6 +2,7 @@ import React from 'react';
 
 const DeleteConfirmModal = ({ deletingPart, refetch, setDeletingPart }) => {
     const { name, _id } = deletingPart
+
     const handleDelete = (id) => {
         fetch(`https://sheltered-meadow-37374.herokuapp.com/part/${id}`, {
             method: 'DELETE',
@@ -19,7 +20,7 @@ const DeleteConfirmModal = ({ deletingPart, refetch, setDeletingPart }) => {
             <div class="modal modal-bottom sm:modal-middle">
                 <div class="modal-box">
                     <h3 class="font-bold text-lg text-red-500">Are you sure you want to delete: {name}</h3>
-                    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                    <p class="py-4">You've  been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
                     <div class="modal-action">
                         <button onClick={() => handleDelete(_id)} class="btn btn-sm">Delete</button>
                         <label for="delete-modal" class="btn btn-sm">Cancel</label>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const MyProfile = () => {
@@ -26,6 +27,7 @@ const MyProfile = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                toast('info addeded in the database')
             })
     }
     return (

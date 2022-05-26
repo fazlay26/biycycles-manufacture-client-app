@@ -12,14 +12,16 @@ const Parts = () => {
         <div className='my-10'>
             <h1 className='text-4xl font-bold text-left textunder'>Featured Products</h1>
             <div className='md:flex space-x-2 justify-center '>
-                {
-                    parts.map(part => <PartCard
-                        key={part._id}
-                        part={part}
-                    >
+                <div className='  md:grid  grid-cols-3 gap-4'>
+                    {
+                        parts.map(part => <PartCard
+                            key={part._id}
+                            part={part}
+                        >
 
-                    </PartCard>)
-                }
+                        </PartCard>)
+                    }
+                </div>
             </div>
 
         </div>

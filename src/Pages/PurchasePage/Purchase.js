@@ -151,7 +151,7 @@ const Purchase = () => {
                                                 message: `you cant order more than ${part.AvailableQuantity}` // JS only: <p>error message</p> TS only support string
                                             }
                                         })}
-                                        type="number" placeholder="order minimum 30 piece" class="input input-bordered w-full max-w-xs" />
+                                        type="number" placeholder="" class="input input-bordered w-full max-w-xs" />
                                     <label className="label">
                                         {errors.productquantity?.type === 'required' && <span className="text-red-500">{errors.productquantity.message}</span>}
                                         {errors.productquantity?.type === 'max' && <span className="text-red-500">{errors.productquantity.message}</span>}
