@@ -112,7 +112,7 @@ const SingleReview = () => {
                                     <div>
 
                                         <h4>{r.name}</h4>
-                                        <h4>{r.ratings}</h4>
+                                        <h4>Ratings: {r.ratings}</h4>
                                     </div>
                                 </div>
                             </div>
