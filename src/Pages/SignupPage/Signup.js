@@ -34,6 +34,7 @@ const Signup = () => {
         //new user jokhon create hobe tokhon displayName null thakbe .displayName ta update korar jonne amader useUpdate hook ta dorker
         await updateProfile({ displayName: data.name }); //updateProfile =react firebase hook theke niye ashbo
         //navigate('/appoinment')
+
     };
     return (
         <div className='flex h-screen justify-center items-center'>

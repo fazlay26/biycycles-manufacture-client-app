@@ -42,7 +42,7 @@ const Purchase = () => {
             orderQuantity: data.productquantity
         }
         //post
-        fetch('https://sheltered-meadow-37374.herokuapp.com/part', {
+        fetch('https://bicycles-manufacture-server.onrender.com/part', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

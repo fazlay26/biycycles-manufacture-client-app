@@ -20,7 +20,7 @@ const Navbar = () => {
         <li><a>Accescorries</a></li>
 
         <li>{user ? <li><Link to='/dashboard'>Dashboard</Link></li> : ''}</li>
-        <li>{user ? <button onClick={logOut} class="btn btn-link mt-3">logout({user.email})</button> : <Link to='/login'>Login</Link>}</li>
+        <li>{user ? <button onClick={logOut} class="btn btn-link mt-3">logout({user?.displayName})</button> : <Link to='/login'>Login</Link>}</li>
     </>
 
 
@@ -39,7 +39,7 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">SuperBike</a>
+                <a className="btn btn-ghost normal-case text-xl">SuperBikee</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

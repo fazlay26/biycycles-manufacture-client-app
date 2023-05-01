@@ -12,7 +12,7 @@ const AddReview = () => {
             ratings: e.target.ratings.value,
             review: e.target.review.value
         }
-        fetch('https://sheltered-meadow-37374.herokuapp.com/addreview', {
+        fetch('https://bicycles-manufacture-server.onrender.com/addreview', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

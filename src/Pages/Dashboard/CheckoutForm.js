@@ -11,7 +11,7 @@ const CheckoutForm = ({ order }) => {
     // let price = order?.pricePerUnit * order?.orderQuantity
     const { pricePerUnit, orderQuantity, customerName, customerEmail, _id } = order
     useEffect(() => {
-        fetch('https://sheltered-meadow-37374.herokuapp.com/create-payment-intent', {
+        fetch('https://bicycles-manufacture-server.onrender.com/create-payment-intent', {
 
             method: 'POST',
             headers: {
@@ -77,7 +77,7 @@ const CheckoutForm = ({ order }) => {
                 productId: _id,
                 transictionId: paymentIntent.id
             }
-            fetch(`https://sheltered-meadow-37374.herokuapp.com/order/${_id}`, {
+            fetch(`https://bicycles-manufacture-server.onrender.com/order/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

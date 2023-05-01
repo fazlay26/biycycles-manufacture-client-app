@@ -4,7 +4,7 @@ const DeleteConfirmModal = ({ deletingPart, refetch, setDeletingPart }) => {
     const { name, _id } = deletingPart
 
     const handleDelete = (id) => {
-        fetch(`https://sheltered-meadow-37374.herokuapp.com/part/${id}`, {
+        fetch(`https://bicycles-manufacture-server.onrender.com/part/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())

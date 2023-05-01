@@ -15,7 +15,7 @@ const MyProfile = () => {
             phone: e.target.number.value,
             linkedin: e.target.linkedin.value,
         }
-        fetch(`https://sheltered-meadow-37374.herokuapp.com/myprofile/${user?.email}`, {
+        fetch(`https://bicycles-manufacture-server.onrender.com/myprofile/${user?.email}`, {
 
             method: 'PUT',
             headers: {

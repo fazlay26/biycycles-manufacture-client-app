@@ -4,7 +4,7 @@ const Useparts = (id) => {
     const [part, setPart] = useState({})
     useEffect(() => {
 
-        fetch(`https://sheltered-meadow-37374.herokuapp.com/part/${id}`)
+        fetch(`https://bicycles-manufacture-server.onrender.com/part/${id}`)
             .then(res => res.json())
             .then(data => setPart(data))
     }, [id])

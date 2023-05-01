@@ -13,7 +13,7 @@ const AddProduct = () => {
             PricePerUnit: e.target.PricePerUnit.value,
         }
 
-        fetch('https://sheltered-meadow-37374.herokuapp.com/adminpost', {
+        fetch('https://bicycles-manufacture-server.onrender.com/adminpost', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

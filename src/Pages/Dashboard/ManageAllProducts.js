@@ -4,7 +4,7 @@ import ManageProductRow from './ManageProductRow';
 const ManageAllProducts = () => {
     const [manageOrder, setManageOrder] = useState([])
     useEffect(() => {
-        fetch('https://sheltered-meadow-37374.herokuapp.com/manageorder')
+        fetch('https://bicycles-manufacture-server.onrender.com/manageorder')
             .then(res => res.json())
             .then(data => setManageOrder(data))
     }, [])

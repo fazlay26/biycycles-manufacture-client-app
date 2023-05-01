@@ -8,7 +8,7 @@ import './SingleReview.css'
 const SingleReview = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('https://sheltered-meadow-37374.herokuapp.com/review')
+        fetch('https://bicycles-manufacture-server.onrender.com/review')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
